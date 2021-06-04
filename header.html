@@ -25,17 +25,17 @@
 </nav>
 
 <script>
-    $( document ).ready(function() {
-      console.log( "ready!" );
-      var pathname = window.location.pathname;
-              console.log(pathname);
-              $('.nav-item').each(function (i) {
-                  if ($(this).children(":first").attr('href').indexOf(pathname) >= 0){
-                    $(this).addClass('active');
-                  }else{
-                    $(this).removeClass('active');
-                  }
-              });
+  $(document).ready(function () {
+    console.log("ready!");
+    var pathname = window.location.pathname;
+    console.log(pathname);
+    $('.nav-item').each(function (i) {
+      if ($(this).children(":first").attr('href').indexOf(pathname) >= 0) {
+        $(this).addClass('active');
+      } else {
+        $(this).removeClass('active');
+      }
+    });
 
   });
 </script>
