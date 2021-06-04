@@ -17,7 +17,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="/contact.html">Contact</a>
+            <a class="nav-link" href="/contact/contact.html">Contact</a>
         </li>
 
       </ul>
@@ -28,7 +28,6 @@
     $( document ).ready(function() {
       console.log( "ready!" );
       var pathname = window.location.pathname;
-              var pages = ['projects', 'hobbies', 'contact'];
               console.log(pathname);
               $('.nav-item').each(function (i) {
                   if ($(this).children(":first").attr('href').indexOf(pathname) >= 0){
