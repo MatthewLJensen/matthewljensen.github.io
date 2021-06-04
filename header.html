@@ -1,1 +1,42 @@
-<a href="http://www.google.com">click here for google</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/index.html">
+        <img src="/imgs/colored_full.png" width="218" height="30" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/projects/projects.html">Projects</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/hobbies/hobbies.html">Hobbies</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact</a>
+        </li>
+
+      </ul>
+    </div>
+</nav>
+
+<script>
+    $( document ).ready(function() {
+      console.log( "ready!" );
+      var pathname = window.location.pathname;
+              var pages = ['projects', 'hobbies', 'contact'];
+              console.log(pathname);
+              $('.nav-item').each(function (i) {
+                  if ($(this).children(":first").attr('href').indexOf(pathname) >= 0){
+                    $(this).addClass('active');
+                  }else{
+                    $(this).removeClass('active');
+                  }
+              });
+
+  });
+</script>
