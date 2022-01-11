@@ -1,6 +1,41 @@
-#footer {
+/* #footer {
     bottom: 0;
     left: 0;
     right: 0;
     position: absolute;
+} */
+
+html, body {
+    height: 100%;
+  }
+  
+  #wrap {
+    min-height: 100%;
+  }
+  
+  #main {
+    padding-bottom:150px; /* this needs to be bigger than footer height*/
+  }
+  
+  .footer {
+    position: relative;
+    margin-top: -150px; /* negative value of footer height */
+    height: 150px;
+    clear:both;
+    padding-top:20px;
+  } 
+
+  .card:hover {
+    transition: .2s;
+    transform: scale(1.05);
+    background-color: var(--tertiary-color);
+}
+
+.card-deck {
+    justify-content: center;
+}
+
+.card-deck .card {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
 }
